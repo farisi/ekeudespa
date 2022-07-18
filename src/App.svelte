@@ -1,5 +1,5 @@
 <script>
-	import { Router, Route, link } from "svelte-navigator";
+	import { Router, Route, link, useNavigate } from "svelte-navigator";
 	import Home from "./components/Home.svelte";
 
 	export let name;
@@ -13,6 +13,9 @@
 	{
 		isShow = isShow=='show' ? '' : 'show';
 	}
+
+	const navigate = useNavigate();
+	console.log(navigate);
 </script>
 
 <div class="container-fluid ">
@@ -39,7 +42,7 @@
 						>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/about" use:link>Tentang</a>
+						<a  class="nav-link" href="/about" use:link>Tentang</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a
